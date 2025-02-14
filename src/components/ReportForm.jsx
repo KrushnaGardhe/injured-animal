@@ -1,10 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { MapContainer, TileLayer, Marker, useMapEvents, useMap } from 'react-leaflet';
-import { Camera, RefreshCw } from 'lucide-react';
+import { MapContainer, TileLayer, useMapEvents, useMap, Marker } from 'react-leaflet';
+import L from 'leaflet';
+import 'leaflet/dist/leaflet.css';
+import markerIcon from 'leaflet/dist/images/marker-icon.png';
+import markerShadow from 'leaflet/dist/images/marker-shadow.png';
+import { Camera, RefreshCw, PawPrint } from 'lucide-react';
 import { Link } from "react-router-dom";
 import { supabase } from '../lib/supabase';
-import 'leaflet/dist/leaflet.css';
-import { PawPrint, LogOut } from 'lucide-react';
 
 function LocationMarker({ position, setPosition }) {
   const map = useMap();
