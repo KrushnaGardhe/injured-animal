@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { signUpNGO } from '../lib/supabase';
+import { PawPrint, LogOut } from 'lucide-react';
 
 export default function NGORegister() {
   const [formData, setFormData] = useState({
@@ -58,6 +59,34 @@ export default function NGORegister() {
   };
 
   return (
+    <div>
+      <nav className="bg-white shadow-sm">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex justify-between h-16">
+          <div className="flex">
+            <Link to="/" className="flex items-center">
+              <PawPrint className="h-8 w-8 text-indigo-600" />
+              <span className="ml-2 text-xl font-bold text-gray-900">Animal Rescue</span>
+            </Link>
+          </div>
+          <div className="flex items-center space-x-4">
+            
+                  <Link
+                    to="/ngo/register"
+                    className="px-4 py-2 rounded-md text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700"
+                  >
+                    Register NGO
+                  </Link>
+                  <Link
+                    to="/ngo/login"
+                    className="px-4 py-2 rounded-md text-sm font-medium text-indigo-600 hover:text-indigo-500"
+                  >
+                    NGO Login
+                  </Link>
+          </div>
+        </div>
+      </div>
+    </nav>
     <div className="max-w-2xl mx-auto bg-white rounded-lg shadow-lg p-8">
       <h2 className="text-3xl font-bold text-gray-900 mb-8 text-center">NGO Registration</h2>
       
@@ -198,5 +227,6 @@ export default function NGORegister() {
         </div>
       </form>
     </div>
+  </div>
   );
 }

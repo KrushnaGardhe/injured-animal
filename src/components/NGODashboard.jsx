@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { MapContainer, TileLayer, Marker, Popup, useMap } from 'react-leaflet';
 import { supabase } from '../lib/supabase';
 import 'leaflet/dist/leaflet.css';
+import { PawPrint, LogOut } from 'lucide-react';
 
 export default function NGODashboard() {
   const [reports, setReports] = useState([]);
@@ -86,6 +87,29 @@ export default function NGODashboard() {
   }
 
   return (
+    <div>
+      <nav className="bg-white shadow-sm">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="flex justify-between h-16">
+                <div className="flex">
+                  <Link to="/" className="flex items-center">
+                    <PawPrint className="h-8 w-8 text-indigo-600" />
+                    <span className="ml-2 text-xl font-bold text-gray-900">Animal Rescue</span>
+                  </Link>
+                </div>
+                <div className="flex items-center space-x-4">
+                  
+                        <Link
+                          to="/ngo/register"
+                          className="px-4 py-2 rounded-md text-sm font-medium text-white bg-red-500 hover:bg-red-700"
+                        >
+                          Logout
+                        </Link>
+                        
+                </div>
+              </div>
+            </div>
+          </nav>
     <div className="space-y-6">
       <div className="bg-white shadow rounded-lg p-6">
         <h2 className="text-2xl font-bold text-gray-900 mb-6">Reports Map</h2>
@@ -157,6 +181,7 @@ export default function NGODashboard() {
           ))}
         </div>
       </div>
+    </div>
     </div>
   );
 }
