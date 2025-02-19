@@ -92,10 +92,10 @@ export default function NGODashboard() {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="flex justify-between h-16">
                 <div className="flex">
-                  <Link to="/" className="flex items-center">
+                  <div  className="flex items-center">
                     <PawPrint className="h-8 w-8 text-indigo-600" />
                     <span className="ml-2 text-xl font-bold text-gray-900">Animal Rescue</span>
-                  </Link>
+                  </div>
                 </div>
                 <div className="flex items-center space-x-4">
                   
