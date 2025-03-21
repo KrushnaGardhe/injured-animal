@@ -61,15 +61,16 @@ function HomePage() {
                     <div class="max-w-7xl mx-auto ">
                         <h2 class="text-4xl font-bold text-center mb-12">WHAT WE DO</h2>
                         <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                            <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+                            <div class="bg-gray-50 hover:cursor-pointer p-6 rounded-lg shadow-lg hover:bg-gradient-to-tr hover:from-yellow-300 hover:to-white hover:from-[0%] hover:to-[100%] relative">
+                  
                                 <h3 class="text-2xl font-semibold mb-4">Sterilization & Vaccination</h3>
                                 <p class="text-gray-700">Controlling the population of stray animals through humane sterilization and vaccination drives, preventing the spread of diseases.</p>
                             </div>
-                            <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+                            <div class="bg-gray-50 hover:cursor-pointer p-6 rounded-lg shadow-lg hover:bg-gradient-to-tr hover:from-yellow-300 hover:to-white hover:from-[0%] hover:to-[100%]">
                                 <h3 class="text-2xl font-semibold mb-4">Emergency Rescue</h3>
                                 <p class="text-gray-700">Providing critical rescue services for animals in distress, whether injured in accidents or abandoned by their owners.</p>
                             </div>
-                            <div class="bg-gray-50 p-6 rounded-lg shadow-lg">
+                            <div class="bg-gray-50 hover:cursor-pointer p-6 rounded-lg shadow-lg hover:bg-gradient-to-tr hover:from-yellow-300 hover:to-white hover:from-[0%] hover:to-[100%]">
                                 <h3 class="text-2xl font-semibold mb-4">Medical Care & Rehabilitation</h3>
                                 <p class="text-gray-700">Our state-of-the-art facility offers essential medical care, surgeries, and rehabilitation to help animals recover and thrive.</p>
                             </div>
